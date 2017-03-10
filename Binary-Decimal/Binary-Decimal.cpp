@@ -25,7 +25,7 @@ int main()
 	int answer;
 	int input1(0), input2(0);
 
-	cout << "+-----------------------+" << endl;
+	cout << "+-------MAIN MENU-------+" << endl;
 	cout << "| 1. Decimal <> Binary\t|" << endl;
 	cout << "| 2. Decimal <> Hex\t|" << endl;
 	cout << "| 3. AND (Binary)\t|" << endl;
@@ -185,49 +185,19 @@ void IPAND()
 {
 	int IP1(0), IP2(0), IP3(0), IP4(0), IP1A(0), IP2A(0), IP3A(0), IP4A(0);
 
-	cout << "|| Please enter one octet at a time, then press ENTER ||" << endl;
-	cout << "++====================================================++" << endl;
+	cout << "|| Please enter IP with one space between each octet, then press ENTER ||" << endl;
+	cout << "++=====================================================================++" << endl;
 
 	system("pause");
 	system("cls");
 
 	cout << "IP Add: ";
-	cin >> IP1;
+	cin >> IP1 >> IP2 >> IP3 >> IP4;
 
-	system("cls");
+	system("cls"); 
 
-	cout << "IP Add: " << IP1 << ".";
-	cin >> IP2;
-
-	system("cls");
-
-	cout << "IP Add: " << IP1 << "." << IP2 << ".";
-	cin >> IP3;
-
-	system("cls");
-
-	cout << "IP Add: " << IP1 << "." << IP2 << "." << IP3 << ".";
-	cin >> IP4;
-
-	system("cls");
-	//--------------------BREAK--------------------//
 	cout << "Sub Add: ";
-	cin >> IP1A;
-
-	system("cls");
-
-	cout << "Sub Add: " << IP1A << ".";
-	cin >> IP2A;
-
-	system("cls");
-
-	cout << "Sub Add: " << IP1A << "." << IP2A << ".";
-	cin >> IP3A;
-
-	system("cls");
-
-	cout << "Sub Add: " << IP1A << "." << IP2A << "." << IP3A << ".";
-	cin >> IP4A;
+	cin >> IP1A >> IP2A >> IP3A >> IP4A;
 
 	system("cls");
 
