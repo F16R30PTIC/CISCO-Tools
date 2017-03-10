@@ -14,7 +14,7 @@
 #include <iostream>
 using namespace std;
 
-void BiDecConv(), IPAND();
+void BiDecConv(), IPAND(), Error();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2);
 
 int main()
@@ -23,13 +23,12 @@ int main()
 	system("cls");
 
 	int answer;
-	int input1(0), input2(0);
 
 	cout << "+-------MAIN MENU-------+" << endl;
 	cout << "| 1. Decimal <> Binary\t|" << endl;
-	cout << "| 2. Decimal <> Hex\t|" << endl;
-	cout << "| 3. AND (Binary)\t|" << endl;
-	cout << "| 4. AND (Decimal)\t|" << endl;
+	cout << "| 2. Decimal <> Hex\t| < NOT YET IMPLEMENTED" << endl;
+	cout << "| 3. EMPTY\t\t| < NOT YET IMPLEMENTED" << endl;
+	cout << "| 4. EMPTY\t\t| < NOT YET IMPLEMENTED" << endl;
 	cout << "| 5. AND IP Address\t|" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
 	cout << "+-----------------------+" << endl;
@@ -45,10 +44,10 @@ int main()
 		
 	}
 	else if (answer == 3) {
-		
+		Error();
 	}
 	else if (answer == 4) {
-		
+		Error();
 	}
 	else if (answer == 5) {
 		IPAND();
@@ -57,7 +56,7 @@ int main()
 		exit(0);
 	}
 	else {
-		main();
+		Error();
 	}
 
     return 0;
@@ -184,20 +183,23 @@ int BiToDec(int input)
 void IPAND()
 {
 	int IP1(0), IP2(0), IP3(0), IP4(0), IP1A(0), IP2A(0), IP3A(0), IP4A(0);
+	char rndChar;
 
-	cout << "|| Please enter IP with one space between each octet, then press ENTER ||" << endl;
-	cout << "++=====================================================================++" << endl;
+	cout << "++======================================================++" << endl;
+	cout << "||  Please enter IP in std format ex. (192.168.1.0) OR  ||" << endl;
+	cout << "||     Enter one octet at a time, then press ENTER      ||" << endl;
+	cout << "++======================================================++" << endl;
 
 	system("pause");
 	system("cls");
 
 	cout << "IP Add: ";
-	cin >> IP1 >> IP2 >> IP3 >> IP4;
+	cin >> IP1 >> rndChar >> IP2 >> rndChar >> IP3 >> rndChar >> IP4;
 
 	system("cls"); 
 
 	cout << "Sub Add: ";
-	cin >> IP1A >> IP2A >> IP3A >> IP4A;
+	cin >> IP1A >> rndChar >> IP2A >> rndChar >> IP3A >> rndChar >> IP4A;
 
 	system("cls");
 
@@ -312,4 +314,17 @@ int AND(int input1, int input2)
 	}
 
 	return output;
+}
+
+void Error()
+{
+	system("cls");
+
+	cout << "++================================++" << endl;
+	cout << "!!   PLEASE ENTER A VALID VALUE   !!" << endl;
+	cout << "++================================++" << endl;
+
+	system("pause");
+
+	main();
 }
