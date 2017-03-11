@@ -198,15 +198,15 @@ void IPAND()
 
 	system("cls"); 
 
-	cout << "Sub Add: ";
+	cout << "Sub Mask: ";
 	cin >> IP1A >> rndChar >> IP2A >> rndChar >> IP3A >> rndChar >> IP4A;
 
 	system("cls");
 
 	cout << "+---------------------------------------+" << endl;
 	cout << "|IP Add:\t\t" << IP1 << "." << IP2 << "." << IP3 << "." << IP4 << "\t|" << endl;
-	cout << "|Sub Add:\t\t" << IP1A << "." << IP2A << "." << IP3A << "." << IP4A << "\t|" << endl;
-	cout << "|Subnet:\t\t" << BiToDec(AND(DecToBi(IP1), DecToBi(IP1A))) << "." << BiToDec(AND(DecToBi(IP2), DecToBi(IP2A))) << "." << BiToDec(AND(DecToBi(IP3), DecToBi(IP3A))) << "." << BiToDec(AND(DecToBi(IP4), DecToBi(IP4A))) << "\t|" << endl;
+	cout << "|Sub Mask:\t\t" << IP1A << "." << IP2A << "." << IP3A << "." << IP4A << "\t|" << endl;
+	cout << "|Subnet ID:\t\t" << BiToDec(AND(DecToBi(IP1), DecToBi(IP1A))) << "." << BiToDec(AND(DecToBi(IP2), DecToBi(IP2A))) << "." << BiToDec(AND(DecToBi(IP3), DecToBi(IP3A))) << "." << BiToDec(AND(DecToBi(IP4), DecToBi(IP4A))) << "\t|" << endl;
 	cout << "+---------------------------------------+" << endl;
 
 	system("pause");
