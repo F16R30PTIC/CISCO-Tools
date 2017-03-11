@@ -14,7 +14,7 @@
 #include <iostream>
 using namespace std;
 
-void BiDecConv(), IPAND(), Error();
+void BiDecConv(), IPAND(), Error(), BitChrt();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2);
 
 int main()
@@ -28,7 +28,7 @@ int main()
 	cout << "| 1. Decimal <> Binary\t|" << endl;
 	cout << "| 2. Decimal <> Hex\t| < NOT YET IMPLEMENTED" << endl;
 	cout << "| 3. EMPTY\t\t| < NOT YET IMPLEMENTED" << endl;
-	cout << "| 4. EMPTY\t\t| < NOT YET IMPLEMENTED" << endl;
+	cout << "| 4. Subnet Bit Chrt\t|" << endl;
 	cout << "| 5. AND IP Address\t|" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
 	cout << "+-----------------------+" << endl;
@@ -47,7 +47,7 @@ int main()
 		Error();
 	}
 	else if (answer == 4) {
-		Error();
+		BitChrt();
 	}
 	else if (answer == 5) {
 		IPAND();
@@ -314,6 +314,11 @@ int AND(int input1, int input2)
 	}
 
 	return output;
+}
+
+void BitChrt()
+{
+	
 }
 
 void Error()
