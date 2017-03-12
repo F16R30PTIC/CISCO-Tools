@@ -2,12 +2,16 @@
 //
 
 //-----------------------------//
-//       Converter V1.0        //
-//       ==============        //
+//      Converter V1.0.1       //
+//      ================       //
 //                             //
-// Fixes:                  0   //
-// Additions:              0   //
-// Lines Added:            0   //
+// Fixes:                  3   //
+// Additions:              1   //
+// Lines Added:            ?   //
+// NOTES:                      //
+// Decimal <> Hex coverter     //
+// started: Many bugs, only    //
+// returns unknown characters. //
 //-----------------------------//
 
 #include "stdafx.h"
@@ -29,8 +33,8 @@ int main()
 	cout << "+-------MAIN MENU-------+" << endl;
 	cout << "| 1. Decimal <> Binary\t|" << endl;
 	cout << "| 2. Decimal <> Hex\t| < BUGS" << endl;
-	cout << "| 3. EMPTY\t\t| < NOT YET IMPLEMENTED" << endl;
-	cout << "| 4. Subnet Bit Chrt\t|" << endl;
+	cout << "| 3. EMPTY\t\t|" << endl;
+	cout << "| 4. EMPTY\t\t|" << endl;
 	cout << "| 5. AND IP Address\t|" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
 	cout << "+-----------------------+" << endl;
