@@ -16,7 +16,6 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 void BiDecConv(), IPAND(), Error(), BitChrt(), HexDecConv();
@@ -299,7 +298,7 @@ void IPAND()
 	cout << "IP Add: ";
 	cin >> IP1 >> rndChar >> IP2 >> rndChar >> IP3 >> rndChar >> IP4;
 
-	system("cls"); 
+	system("cls");
 
 	cout << "Sub Mask: ";
 	cin >> IP1A >> rndChar >> IP2A >> rndChar >> IP3A >> rndChar >> IP4A;
