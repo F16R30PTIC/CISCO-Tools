@@ -18,7 +18,7 @@
 #include <iostream>
 using namespace std;
 
-void BiDecConv(), IPAND(), Error(), BitChrt(), HexDecConv();
+void BiDecConv(), IPAND(), Error(), BitChrt(), HexDecConv(), Ranges();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2);
 char DecToHex(int input);
 
@@ -32,7 +32,7 @@ int main()
 	cout << "+-------MAIN MENU-------+" << endl;
 	cout << "| 1. Decimal <> Binary\t|" << endl;
 	cout << "| 2. Decimal <> Hex\t| < BUGS" << endl;
-	cout << "| 3. EMPTY\t\t|" << endl;
+	cout << "| 3. Subnet Ranges\t| < NOT YET IMPLEMENTED" << endl;
 	cout << "| 4. EMPTY\t\t|" << endl;
 	cout << "| 5. AND IP Address\t|" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
@@ -49,7 +49,7 @@ int main()
 		HexDecConv();
 	}
 	else if (answer == 3) {
-		Error();
+		Ranges();
 	}
 	else if (answer == 4) {
 		Error();
@@ -280,6 +280,25 @@ char DecToHex(int input)
 	}
 
 	return plc0, plc1;
+}
+
+void Ranges()
+{
+	int octet;
+
+	cout << "++==============================================++" << endl;
+	cout << "||                     NOTE                     ||" << endl;
+	cout << "||  THIS FUNCTION ONLY WORKS FOR ONE OCTET OF   ||" << endl;
+	cout << "||                  THE SUBNET                  ||" << endl;
+	cout << "++==============================================++" << endl;
+
+	system("pause");
+
+	cout << "Enter a subnet octet to find the ranges of each subnet: ";
+	cin >> octet;
+
+	main();
+	}
 }
 
 void IPAND()
