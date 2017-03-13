@@ -64,7 +64,7 @@ int main()
 		Error();
 	}
 
-    return 0;
+	return 0;
 }
 
 void BiDecConv()
@@ -185,103 +185,6 @@ int BiToDec(int input)
 	return output;
 }
 
-void HexDecConv()
-{
-	int input;
-
-	cout << "TYPES" << endl;
-	cout << "++======================++" << endl;
-	cout << "|| 1. Decimal\t\t||" << endl;
-	cout << "|| 2. Hex\t\t||" << endl;
-	cout << "++======================++" << endl;
-	cout << "Please enter type of # to be converted: ";
-	cin >> input;
-
-	system("cls");
-
-	if (input == 1) {
-		cout << "Please enter number to be converted: ";
-		cin >> input;
-
-		system("cls");
-
-		cout << "Decimal:\t" << input << endl;
-		cout << "Hex    :\t" << DecToHex(input) << endl;
-	}
-	else if (input == 2) {
-		cout << "Please enter number to be converted: ";
-		cin >> input;
-
-		system("cls");
-
-		cout << "Hex    :\t" << input << endl;
-		cout << "Decimal:\t" << BiToDec(input) << endl;
-	}
-
-	system("pause");
-
-	main();
-}
-
-char DecToHex(int input)
-{
-	int i, remainder;
-	char plc0, plc1;
-
-	remainder = input % 16;
-
-	if (remainder != 0) {
-		i = floor(input / 16);
-
-		if (i < 10) {
-			plc0 = i;
-		}
-		else if (i == 10) {
-			plc0 = 'A';
-		}
-		else if (i == 11) {
-			plc0 = 'B';
-		}
-		else if (i == 12) {
-			plc0 = 'C';
-		}
-		else if (i == 13) {
-			plc0 = 'D';
-		}
-		else if (i == 14) {
-			plc0 = 'E';
-		}
-		else if (i == 15) {
-			plc0 = 'F';
-		}
-	}
-	else plc0 = 0;
-
-	if (remainder < 10) {
-		plc1 = remainder;
-	}
-	else if (remainder == 10) {
-		plc1 = 'A';
-	}
-	else if (remainder == 11) {
-		plc1 = 'B';
-	}
-	else if (remainder == 12) {
-		plc1 = 'C';
-	}
-	else if (remainder == 13) {
-		plc1 = 'D';
-	}
-	else if (remainder == 14) {
-		plc1 = 'E';
-	}
-	else if (remainder == 15) {
-		plc1 = 'F';
-	}
-
-	return plc0, plc1;
-}
-
 void Ranges()
 {
 	int octet;
@@ -298,7 +201,6 @@ void Ranges()
 	cin >> octet;
 
 	main();
-	}
 }
 
 void IPAND()
