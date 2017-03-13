@@ -18,7 +18,7 @@
 #include <iostream>
 using namespace std;
 
-void BiDecConv(), IPAND(), Error(), HexDecConv(), Ranges();
+void BiDecConv(), IPAND(), Error(), Ranges();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2);
 char DecToHex(int input);
 
@@ -46,7 +46,7 @@ int main()
 		BiDecConv();
 	}
 	else if (answer == 2) {
-		HexDecConv();
+		Error();
 	}
 	else if (answer == 3) {
 		Ranges();
@@ -187,7 +187,7 @@ int BiToDec(int input)
 
 void Ranges()
 {
-	int octet;
+	int i, octet, numHosts, range;
 
 	cout << "++==============================================++" << endl;
 	cout << "||                     NOTE                     ||" << endl;
@@ -196,11 +196,24 @@ void Ranges()
 	cout << "++==============================================++" << endl;
 
 	system("pause");
+	system("cls");
 
 	cout << "Enter a subnet octet to find the ranges of each subnet: ";
 	cin >> octet;
 
+	numHosts = 2 ^ NumNetBits(DecToBi(octet));
+
+	do while (range < 255) {
+		cout << "Range: " << range + 1 << " - " << range + numHosts;
+		range += numHosts;
+	}
+
 	main();
+}
+
+int NumNetBits(int binary)
+{
+
 }
 
 void IPAND()
