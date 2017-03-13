@@ -16,6 +16,7 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <cmath>;
 using namespace std;
 
 void BiDecConv(), IPAND(), Error(), Ranges();
@@ -187,7 +188,7 @@ int BiToDec(int input)
 
 void Ranges()
 {
-	int i, octet, numHosts, range;
+	int octet(0), numHosts(0), range(-1);
 
 	cout << "++==============================================++" << endl;
 	cout << "||                     NOTE                     ||" << endl;
@@ -201,51 +202,57 @@ void Ranges()
 	cout << "Enter a subnet octet to find the ranges of each subnet: ";
 	cin >> octet;
 
-	numHosts = 2 ^ NumNetBits(DecToBi(octet));
+	system("cls");
+
+	numHosts = pow(2, (8 - NumNetBits(DecToBi(octet))));
+
+	cout << "Ranges of each subnet: " << endl;
 
 	while (range < 255) {
-		cout << "Range: " << range + 1 << " - " << range + numHosts;
+		cout << range + 1 << " - " << range + numHosts << endl;
 		range += numHosts;
 	}
+
+	system("pause");
 
 	main();
 }
 
 int NumNetBits(int binary)
 {
-	int num;
+	int num(0);
 
-	if (binary <= 10000000) {
+	if (binary >= 10000000) {
 		num += 1;
-		binary -= 10000000
+		binary -= 10000000;
 	}
-	if (binary <= 1000000) {
+	if (binary >= 1000000) {
 		num += 1;
-		binary -= 1000000
+		binary -= 1000000;
 	}
-	if (binary <= 100000) {
+	if (binary >= 100000) {
 		num += 1;
-		binary -= 100000
+		binary -= 100000;
 	}
-	if (binary <= 10000) {
+	if (binary >= 10000) {
 		num += 1;
-		binary -= 10000
+		binary -= 10000;
 	}
-	if (binary <= 1000) {
+	if (binary >= 1000) {
 		num += 1;
-		binary -= 1000
+		binary -= 1000;
 	}
-	if (binary <= 100) {
+	if (binary >= 100) {
 		num += 1;
-		binary -= 100
+		binary -= 100;
 	}
-	if (binary <= 10) {
+	if (binary >= 10) {
 		num += 1;
-		binary -= 10
+		binary -= 10;
 	}
-	if (binary <= 1) {
+	if (binary >= 1) {
 		num += 1;
-		binary -= 1
+		binary -= 1;
 	}
 
 	return num;
