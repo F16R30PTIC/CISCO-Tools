@@ -18,7 +18,7 @@
 #include <iostream>
 using namespace std;
 
-void BiDecConv(), IPAND(), Error(), BitChrt(), HexDecConv(), Ranges();
+void BiDecConv(), IPAND(), Error(), HexDecConv(), Ranges();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2);
 char DecToHex(int input);
 
