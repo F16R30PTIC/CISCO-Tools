@@ -19,7 +19,7 @@
 using namespace std;
 
 void BiDecConv(), IPAND(), Error(), Ranges();
-int DecToBi(int input), BiToDec(int input), AND(int input1, int input2);
+int DecToBi(int input), BiToDec(int input), AND(int input1, int input2), NumNetBits(int binary);
 char DecToHex(int input);
 
 int main()
@@ -203,7 +203,7 @@ void Ranges()
 
 	numHosts = 2 ^ NumNetBits(DecToBi(octet));
 
-	do while (range < 255) {
+	while (range < 255) {
 		cout << "Range: " << range + 1 << " - " << range + numHosts;
 		range += numHosts;
 	}
@@ -213,7 +213,42 @@ void Ranges()
 
 int NumNetBits(int binary)
 {
+	int num;
 
+	if (binary <= 10000000) {
+		num += 1;
+		binary -= 10000000
+	}
+	if (binary <= 1000000) {
+		num += 1;
+		binary -= 1000000
+	}
+	if (binary <= 100000) {
+		num += 1;
+		binary -= 100000
+	}
+	if (binary <= 10000) {
+		num += 1;
+		binary -= 10000
+	}
+	if (binary <= 1000) {
+		num += 1;
+		binary -= 1000
+	}
+	if (binary <= 100) {
+		num += 1;
+		binary -= 100
+	}
+	if (binary <= 10) {
+		num += 1;
+		binary -= 10
+	}
+	if (binary <= 1) {
+		num += 1;
+		binary -= 1
+	}
+
+	return num;
 }
 
 void IPAND()
