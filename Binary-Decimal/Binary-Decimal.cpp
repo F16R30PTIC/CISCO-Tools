@@ -32,8 +32,8 @@ int main()
 
 	cout << "+-------MAIN MENU-------+" << endl;
 	cout << "| 1. Decimal <> Binary\t|" << endl;
-	cout << "| 2. Decimal <> Hex\t| < BUGS" << endl;
-	cout << "| 3. Subnet Ranges\t| < NOT YET IMPLEMENTED" << endl;
+	cout << "| 2. Decimal <> Hex\t| < NOT YET IMPLEMENTED" << endl;
+	cout << "| 3. Subnet Ranges\t|" << endl;
 	cout << "| 4. EMPTY\t\t|" << endl;
 	cout << "| 5. AND IP Address\t|" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
