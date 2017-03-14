@@ -14,12 +14,11 @@
 // returns unknown characters. //
 //-----------------------------//
 
-#include "stdafx.h"
 #include <iostream>
-#include <cmath>;
+#include <cmath>
 using namespace std;
 
-void BiDecConv(), IPAND(), Error(), Ranges(), SubMap();
+void BiDecConv(), IPAND(), Error(), Ranges(), SubMap(), BiDecConvHelp(), RangesHelp(), IPANDHelp(), SubMapHelp();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2), NumNetBits(int binary);
 char DecToHex(int input);
 
@@ -29,13 +28,14 @@ int main()
 	system("cls");
 
 	int answer;
+	char help;
 
 	cout << "+-------MAIN MENU-------+" << endl;
 	cout << "| 1. Decimal <> Binary\t|" << endl;
 	cout << "| 2. Decimal <> Hex\t| < NOT YET IMPLEMENTED" << endl;
-	cout << "| 3. Subnet Ranges\t|" << endl;
-	cout << "| 4. Subnet Map\t| < NOT YET IMPLEMENTED" << endl;
-	cout << "| 5. AND IP Address\t|" << endl;
+	cout << "| 3. AND IP Address\t|" << endl;
+	cout << "| 4. Subnet Ranges\t|" << endl;
+	cout << "| 5. Subnet Map\t\t| < NOT YET IMPLEMENTED" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
 	cout << "+-----------------------+" << endl;
 	cout << "Please enter an option and press enter: ";
@@ -44,20 +44,25 @@ int main()
 	system("cls");
 
 	if (answer == 1) {
+		if (help == '?') {
+			BiDecConvHelp();
+		}
+		else {
 		BiDecConv();
+		}
 	}
 	else if (answer == 2) {
 		Error();
 	}
 	else if (answer == 3) {
-		Ranges();
+		IPAND();
 	}
 	else if (answer == 4) {
-		Error();
-		SubMap();
+		Ranges();
 	}
 	else if (answer == 5) {
-		IPAND();
+		Error();
+		SubMap();
 	}
 	else if (answer == 6) {
 		exit(0);
@@ -67,6 +72,19 @@ int main()
 	}
 
 	return 0;
+}
+//---------------------------------------------//
+//-------------------BREAK---------------------//
+//---------------------------------------------//
+void BiDecConvHelp()
+{
+	cout << "++============================================================++" << endl;
+	cout << "|| THIS FUNCTION CONVERTS BETWEEN BINARY AND DECIMAL INTEGERS ||" << endl;
+	cout << "++============================================================++" << endl;
+
+	system("pause");
+
+	main();
 }
 
 void BiDecConv()
@@ -187,6 +205,15 @@ int BiToDec(int input)
 	return output;
 }
 
+//---------------------------------------------//
+//-------------------BREAK---------------------//
+//---------------------------------------------//
+
+void RangesHelp()
+{
+
+}
+
 void Ranges()
 {
 	int octet(0), numHosts(0), range(-1);
@@ -257,6 +284,15 @@ int NumNetBits(int binary)
 	}
 
 	return num;
+}
+
+//---------------------------------------------//
+//-------------------BREAK---------------------//
+//---------------------------------------------//
+
+void IPANDHelp()
+{
+
 }
 
 void IPAND()
@@ -395,11 +431,19 @@ int AND(int input1, int input2)
 	return output;
 }
 
+//---------------------------------------------//
+//-------------------BREAK---------------------//
+//---------------------------------------------//
+
+void SubMapHelp()
+{
+
+}
+
 void SubMap()
 {
 	int cnt(1), hosts(0);
-	ofstream binFile;
-	
+
 	cout << "++===========================================++" << endl;
 	cout << "|| THIS FEATURE IS TO CREATE A TEMPORARY MAP ||" << endl;
 	cout << "||   FOR A SUBNET. CHANGES CAN BE SAVED TO   ||" << endl;
