@@ -19,7 +19,7 @@
 #include <cmath>;
 using namespace std;
 
-void BiDecConv(), IPAND(), Error(), Ranges();
+void BiDecConv(), IPAND(), Error(), Ranges(), SubMap();
 int DecToBi(int input), BiToDec(int input), AND(int input1, int input2), NumNetBits(int binary);
 char DecToHex(int input);
 
@@ -34,7 +34,7 @@ int main()
 	cout << "| 1. Decimal <> Binary\t|" << endl;
 	cout << "| 2. Decimal <> Hex\t| < NOT YET IMPLEMENTED" << endl;
 	cout << "| 3. Subnet Ranges\t|" << endl;
-	cout << "| 4. EMPTY\t\t|" << endl;
+	cout << "| 4. Subnet Map\t| < NOT YET IMPLEMENTED" << endl;
 	cout << "| 5. AND IP Address\t|" << endl;
 	cout << "| 6. EXIT\t\t|" << endl;
 	cout << "+-----------------------+" << endl;
@@ -54,6 +54,7 @@ int main()
 	}
 	else if (answer == 4) {
 		Error();
+		SubMap();
 	}
 	else if (answer == 5) {
 		IPAND();
@@ -392,6 +393,23 @@ int AND(int input1, int input2)
 	}
 
 	return output;
+}
+
+void SubMap()
+{
+	int cnt(1), hosts(0);
+	ofstream binFile;
+	
+	cout << "++===========================================++" << endl;
+	cout << "|| THIS FEATURE IS TO CREATE A TEMPORARY MAP ||" << endl;
+	cout << "||   FOR A SUBNET. CHANGES CAN BE SAVED TO   ||" << endl;
+	cout << "||           A TEXT FILE WHEN DONE           ||" << endl;
+	cout << "++===========================================++" << endl;
+
+	system("pause");
+
+	cout << "Enter the number of hosts in this subnet: ";
+	cin >> hosts;
 }
 
 void Error()
